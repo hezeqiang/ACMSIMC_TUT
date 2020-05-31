@@ -1,3 +1,4 @@
+import os
 import shutil
 from utility import my_execfile
 from utility_moo import *
@@ -7,7 +8,9 @@ bool_re_evaluate = False # re-evaluate the designs using csv (without calling FE
 #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 # 0. FEA Setting / General Information & Packages Loading
 #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
-my_execfile('./default_setting.py', g=globals(), l=locals())
+
+my_execfile('./codes3/default_setting.py', g=globals(), l=locals())   #the data need to be fetched into programs, g is global variable
+
 fea_config_dict
 fea_config_dict['local_sensitivity_analysis'] = False
 fea_config_dict['bool_refined_bounds'] = False
@@ -25,7 +28,7 @@ if 'Y730' in fea_config_dict['pc_name']:
 fea_config_dict['run_folder'] = run_folder
 
 # spec's
-my_execfile('./spec_Prototype2poleOD150mm500Hz_SpecifyTipSpeed.py', g=globals(), l=locals())
+my_execfile('./codes3/spec_Prototype2poleOD150mm500Hz_SpecifyTipSpeed.py', g=globals(), l=locals())
 spec
 fea_config_dict['Active_Qr'] = spec.Qr
 fea_config_dict['use_drop_shape_rotor_bar'] = spec.use_drop_shape_rotor_bar
