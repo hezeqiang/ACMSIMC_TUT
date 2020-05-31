@@ -1,5 +1,4 @@
 #coding:utf-8
-
 import femm
 from math import tan, pi, atan, cos, sin, sqrt, copysign, exp
 import numpy as np
