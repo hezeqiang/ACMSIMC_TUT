@@ -1,10 +1,20 @@
 import os
 import shutil
+from math import cos, sin, pi, sqrt
 from utility import my_execfile
 from utility_moo import *
 from win32com.client import pywintypes
 bool_re_evaluate = False # re-evaluate the designs using csv (without calling FEA softwares)
 
+# os.getcwd()               #获取当前目录(pwd)
+# os.chdir("/Users")     #切换到某个指定的目录(cd /Users)
+# os.curdir                   #返回当前目录('.'、cd .)
+# os.pardir                   #返回上级目录('..'、cd ..)
+print(os.getcwd())
+
+os.chdir(os.getcwd()+'/_femm/codes3')
+
+print(os.getcwd())
 #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
 # 0. FEA Setting / General Information & Packages Loading
 #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
@@ -24,8 +34,8 @@ if 'Y730' in fea_config_dict['pc_name']:
     fea_config_dict['SUSPENSION_CURRENT_RATIO'] = 0.025
     fea_config_dict['which_filter'] = 'FixedStatorSlotDepth' # 'VariableStatorSlotDepth'
 
-
 run_folder = r'run#1000/'
+
 fea_config_dict['run_folder'] = run_folder
 
 # spec's
