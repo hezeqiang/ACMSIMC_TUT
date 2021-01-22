@@ -15,8 +15,6 @@ import logging
 
 print(os.getcwd())
 
-
-
 one_report_dir_prefix = os.getcwd()+'/_femm/release/OneReport/OneReport_TEX/contents/'
 print(one_report_dir_prefix)
 file_name = 'pyrhonen_procedure'
