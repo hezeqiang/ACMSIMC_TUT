@@ -17,7 +17,8 @@ print(os.getcwd())
 
 
 
-one_report_dir_prefix = 'D:/ACMSIMC_TUT/_femm/release/OneReport/OneReport_TEX/contents/'
+one_report_dir_prefix = os.getcwd()+'/_femm/release/OneReport/OneReport_TEX/contents/'
+print(one_report_dir_prefix)
 file_name = 'pyrhonen_procedure'
 file_suffix = '.tex'
 
@@ -198,12 +199,12 @@ class desgin_specification(object):
     #~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
         no_phase_m = 3
         speed_rpm = self.ExcitationFreq * 60 / self.p # rpm
-        U1_rms = self.VoltageRating / sqrt(3) # V - Wye-connect #480 V is standarnd # 电压越高，意味着越厚的绝缘占去槽空间（Lipo2017书）
+        U1_rms = self.VoltageRating / sqrt(2) # V - Wye-connect #48 V is standarnd # 电压越高，意味着越厚的绝缘占去槽空间（Lipo2017书）
             # U1_rms = 500. / sqrt(3) # The design used in ECCE
         stator_phase_voltage_rms = U1_rms
-        bool_we_have_plenty_voltage = True
+        bool_we_have_plenty_voltage = False
         print('bool_we_have_plenty_voltage is %s' % 'True' if bool_we_have_plenty_voltage else 'False')
-        if math.isclose(480, self.VoltageRating):
+        if math.isclose(48, self.VoltageRating):
             bool_standard_voltage_rating = True
         else:
             bool_standard_voltage_rating = False

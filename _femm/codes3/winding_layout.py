@@ -1,4 +1,5 @@
-
+# winding configuration about the main and suspending winding
+# https://ieeexplore.ieee.org/abstract/document/7104444
 class winding_layout(object):
     def __init__(self, DPNV_or_SEPA, Qs, p):
 
