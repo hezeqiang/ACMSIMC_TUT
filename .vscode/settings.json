@@ -2,6 +2,7 @@
     "files.associations": {
         "cstdio": "cpp",
         "fstream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "acmsim.h": "c"
     }
 }

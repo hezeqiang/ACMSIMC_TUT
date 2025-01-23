@@ -8,6 +8,7 @@ double fabs(double x){
 }
 
 struct SynchronousMachineSimulated ACM;
+
 void Machine_init(){
 
     ACM.Ts = MACHINE_TS;
@@ -102,7 +103,6 @@ void RK_Linear(double t, double *x, double hs){
     #undef NS
 }
 
-
 int machine_simulation(){
 
     // solve for ACM.x with ACM.ud and ACM.uq as inputs
@@ -146,6 +146,7 @@ int machine_simulation(){
 void dynamics_lpf_local(double input, double *state, double *derivative){
     derivative[0] = (50*2*M_PI) * ( input - *state );
 }
+
 void measurement(){
     // Executed every TS
 
@@ -164,6 +165,7 @@ void measurement(){
     sm.omg_elec = ACM.x[2];
     sm.omg_mech = sm.omg_elec * sm.npp_inv;
 }
+
 void inverter_model(){
 
     // 根据给定电压CTRL.ual和实际的电机电流ACM.ial，计算畸变的逆变器输出电压ACM.ual。
@@ -291,8 +293,10 @@ void write_header_to_file(FILE *fw){
         fclose(fw2);
     }
 }
+
 extern double theta_d_harnefors;
 extern double omg_harnefors;
+
 void write_data_to_file(FILE *fw){
     static int bool_animate_on = false;
     static int j=0,jj=0; // j,jj for down sampling
