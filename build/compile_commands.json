@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/UnipolarSimstatic.dir/commissioning.c.o -c /home/he/MotorSim/ACMSIMC_TUT/commissioning.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/commissioning.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/UnipolarSimstatic.dir/controller.c.o -c /home/he/MotorSim/ACMSIMC_TUT/controller.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/controller.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/UnipolarSimstatic.dir/inverter.c.o -c /home/he/MotorSim/ACMSIMC_TUT/inverter.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/inverter.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/UnipolarSimstatic.dir/observer.c.o -c /home/he/MotorSim/ACMSIMC_TUT/observer.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/observer.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/UnipolarSimstatic.dir/satlut.c.o -c /home/he/MotorSim/ACMSIMC_TUT/satlut.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/satlut.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/UnipolarSimstatic.dir/main.c.o -c /home/he/MotorSim/ACMSIMC_TUT/main.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/main.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/main.dir/commissioning.c.o -c /home/he/MotorSim/ACMSIMC_TUT/commissioning.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/commissioning.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/main.dir/controller.c.o -c /home/he/MotorSim/ACMSIMC_TUT/controller.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/controller.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/main.dir/inverter.c.o -c /home/he/MotorSim/ACMSIMC_TUT/inverter.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/inverter.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/main.dir/observer.c.o -c /home/he/MotorSim/ACMSIMC_TUT/observer.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/observer.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/main.dir/satlut.c.o -c /home/he/MotorSim/ACMSIMC_TUT/satlut.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/satlut.c"
+},
+{
+  "directory": "/home/he/MotorSim/ACMSIMC_TUT/build",
+  "command": "/usr/bin/gcc  -I/home/he/MotorSim/ACMSIMC_TUT/. -g -std=gnu99 -o CMakeFiles/main.dir/main.c.o -c /home/he/MotorSim/ACMSIMC_TUT/main.c",
+  "file": "/home/he/MotorSim/ACMSIMC_TUT/main.c"
+}
+]

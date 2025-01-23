@@ -162,6 +162,7 @@ void harnefors_scvm(){
     while(theta_d_harnefors>M_PI) theta_d_harnefors-=2*M_PI;
     while(theta_d_harnefors<-M_PI) theta_d_harnefors+=2*M_PI;   
 }
+
 void control(double speed_cmd, double speed_cmd_dot){
     // Input 1 is feedback: estimated speed/position or measured speed/position
     #if SENSORLESS_CONTROL

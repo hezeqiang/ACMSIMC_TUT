@@ -65,6 +65,7 @@ void RK_dynamics(double t, double *x, double *fx){
     fx[2] = (ACM.Tem - ACM.Tload)*ACM.mu_m; // elec. angular rotor speed
     fx[3] = x[2];                           // elec. angular rotor position
 }
+
 void RK_Linear(double t, double *x, double hs){
     #define NS NUMBER_OF_STATES
 
@@ -201,6 +202,7 @@ int main(){
     // ob_init();
     COMM_init();
 
+
     FILE *fw;
     fw = fopen(DATA_FILE_NAME, "w");
     printf("%s\n", DATA_FILE_NAME);
@@ -283,7 +285,7 @@ void write_header_to_file(FILE *fw){
     // fprintf(fw, "x0(id)[A],x1(iq)[A],x2(speed)[rpm],x3(position)[rad],ud[V],uq[V],IS_C(0),CTRL.ual,ACM.ual,ACM.theta_d,DIST_AL,COMM.KE\n");
     {
         FILE *fw2;
-        fw2 = fopen("info.dat", "w");
+        fw2 = fopen("../info.dat", "w");
         fprintf(fw2, "TS,DOWN_SAMPLE,DATA_FILE_NAME\n");
         fprintf(fw2, "%g, %d, %s\n", TS, DOWN_SAMPLE, DATA_FILE_NAME);
         fclose(fw2);
