@@ -1,4 +1,3 @@
-
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
@@ -13,7 +12,6 @@ struct PID_Reg{
    double   e_state; // last error internal state
    double   o_state; // last output internal state
 };
-double PID(struct PID_Reg *r, double err);
 
 struct ControllerForExperiment{
 
@@ -73,11 +71,15 @@ struct ControllerForExperiment{
     struct PID_Reg PID_id;
     struct PID_Reg PID_iq;
 };
+
+// Global variables defined
 extern struct ControllerForExperiment CTRL;
+extern double theta_d_harnefors ;
+extern double omg_harnefors ;
 
 void CTRL_init();
 void control(double speed_cmd, double speed_cmd_dot);
-
+double PID(struct PID_Reg *r, double err);
 
 void cmd_fast_speed_reversal(double timebase, double instant, double interval, double rpm_cmd);
 void cmd_slow_speed_reversal(double timebase, double instant, double interval, double rpm_cmd);

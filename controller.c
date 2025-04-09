@@ -1,5 +1,10 @@
 #include "ACMSim.h"
 
+// Define the global variable
+struct ControllerForExperiment CTRL;
+double theta_d_harnefors = 0.0;
+double omg_harnefors = 0.0;
+
 /* PI Control
  * */
 #define INCREMENTAL_PID TRUE
@@ -72,7 +77,6 @@ double PID(struct PID_Reg *r, double err){
 #endif
 
 /* Initialization */
-struct ControllerForExperiment CTRL;
 void CTRL_init(){
     int i=0,j=0;
 
@@ -141,8 +145,8 @@ void CTRL_init(){
     CTRL.PID_iq.i_limit = CURRENT_LOOP_LIMIT_VOLTS; // unit: Volt, 350V->max 1300rpm
     CTRL.PID_iq.i_state = 0.0;
 }
-double theta_d_harnefors = 0.0;
-double omg_harnefors = 0.0;
+
+
 void harnefors_scvm(){
     #define KE_MISMATCH 1.0 // 0.7
     double d_axis_emf;

@@ -3,6 +3,7 @@
         "cstdio": "cpp",
         "fstream": "cpp",
         "iostream": "cpp",
-        "acmsim.h": "c"
+        "acmsim.h": "c",
+        "controller.h": "c"
     }
 }

@@ -1,4 +1,22 @@
 #include "ACMSim.h"
+#include "controller.h"
+
+
+struct SynchronousMachineSimulated ACM;
+
+void write_header_to_file(FILE *fw){
+    // no space is allowed!
+    fprintf(fw, "x0(id)[A],x1(iq)[A],x2(speed)[rpm],x3(position)[rad],ud_cmd[V],uq_cmd[V],id[A],id_err[A],iq_cmd[A],iq_err[A],CTRL_POS_ERR,MEAS_POS_ERR,theta_d_harnefors,POS_ERR_Harnefors,omg_harnefors,OMG_ERR_Harnefors\n");
+    // fprintf(fw, "x0(id)[A],x1(iq)[A],x2(speed)[rpm],x3(position)[rad],ud[V],uq[V],IS_C(0),CTRL.ual,ACM.ual,ACM.theta_d,DIST_AL,COMM.KE\n");
+    {
+        FILE *fw2;
+        fw2 = fopen("../info.dat", "w");
+        fprintf(fw2, "TS,DOWN_SAMPLE,DATA_FILE_NAME\n");
+        fprintf(fw2, "%g, %d, %s\n", TS, DOWN_SAMPLE, DATA_FILE_NAME);
+        fclose(fw2);
+    }
+}
+
 
 double sign(double x){
     return (x > 0) - (x < 0);    
@@ -7,7 +25,6 @@ double fabs(double x){
     return (x >= 0) ? x : -x;
 }
 
-struct SynchronousMachineSimulated ACM;
 
 void Machine_init(){
 
@@ -204,7 +221,6 @@ int main(){
     // ob_init();
     COMM_init();
 
-
     FILE *fw;
     fw = fopen(DATA_FILE_NAME, "w");
     printf("%s\n", DATA_FILE_NAME);
@@ -280,22 +296,6 @@ int main(){
     return 0; 
 }
 
-/* Utility */
-void write_header_to_file(FILE *fw){
-    // no space is allowed!
-    fprintf(fw, "x0(id)[A],x1(iq)[A],x2(speed)[rpm],x3(position)[rad],ud_cmd[V],uq_cmd[V],id[A],id_err[A],iq_cmd[A],iq_err[A],CTRL_POS_ERR,MEAS_POS_ERR,theta_d_harnefors,POS_ERR_Harnefors,omg_harnefors,OMG_ERR_Harnefors\n");
-    // fprintf(fw, "x0(id)[A],x1(iq)[A],x2(speed)[rpm],x3(position)[rad],ud[V],uq[V],IS_C(0),CTRL.ual,ACM.ual,ACM.theta_d,DIST_AL,COMM.KE\n");
-    {
-        FILE *fw2;
-        fw2 = fopen("../info.dat", "w");
-        fprintf(fw2, "TS,DOWN_SAMPLE,DATA_FILE_NAME\n");
-        fprintf(fw2, "%g, %d, %s\n", TS, DOWN_SAMPLE, DATA_FILE_NAME);
-        fclose(fw2);
-    }
-}
-
-extern double theta_d_harnefors;
-extern double omg_harnefors;
 
 void write_data_to_file(FILE *fw){
     static int bool_animate_on = false;
